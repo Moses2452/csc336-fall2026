@@ -1,0 +1,45 @@
+#main-title{
+    text-transform: uppercase;
+}
+
+
+body{
+    background-color: purple;
+    color: white;
+    font-family: "Times New Roman", serif;
+    margin: 10px;
+}
+
+h2{
+    color: gold;
+}
+
+.highlight{
+    color: gold;
+    font-weight: bold;
+}
+
+
+a:hover{
+    background-color: gold;
+}
+
+
+.sub_heading{
+    border-bottom: 2px solid gold;
+    padding-bottom: 5px;
+}
+
+.paragraph{
+    line-height: 1.5;
+}
+
+img{
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.8);
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+}
