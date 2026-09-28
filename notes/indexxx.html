@@ -1,0 +1,50 @@
+<html>
+    <head>
+        
+    </head>
+
+    <body>
+        <div id="buttonDataDiv"> </div>
+
+        <div id="buttonsDiv"> </div>
+
+        <input id= "inputElement" type=" text">
+        
+        <script>
+        
+
+            let buttonData= ["One", "Two", "Three", "Four", "Five"];
+
+            // Get refrences to DOM elements
+            let buttonDataDiv = document.querySelector("#buttonDataDiv");
+            let buttonsDiv = document.querySelector("#buttonsDiv");
+            let inputElement = document.querySelector("inputElement")
+
+
+            //Define the event listener for the buttons
+            function buttonClick(e) {
+                console.log(e.target.innerHTML);
+                buttonDataDiv.innerHTML = e.target.innerHTML;
+              
+                //Get the current value of the input text area and check it against a password
+                if (inputElement.value === "PASSWORD") {
+                    console.log ("Connect");
+                 } else {
+                        console.log("Not correct");
+                    }
+                }
+        
+         
+            for (let i = 0; i <buttonData.length; i++) {
+                let button = document.createElement("button");
+                button.innerHTML = buttonData[i];
+                button.addEventListener("click", buttonClick);
+                buttonsDiv.append(button);
+                
+            }
+        
+        </script>
+
+    </body>
+
+</html>

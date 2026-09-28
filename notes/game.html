@@ -1,0 +1,51 @@
+<html>
+    <head>
+
+
+    </head>
+
+    <body>
+        <div id="roomRoot"> </div>
+
+        <script>
+            let roomRootDiv = document.querySelector("#roomRoot")
+
+            let rooms= {
+                entry: {
+                    name: "Entry Room",
+                    description: "This is where the game starts",
+                    linkedRooms: ["classRoom"]
+                }
+            }
+
+            let currentRoom = rooms["entry"];
+
+            function navButtonClicked(e) {
+                console.log(e.target.innerHTML);
+            }
+
+            function visualizeRoom(room) {
+                let roomTitle = document.createElement("h1");
+                roomTitle.innerHTML = room.name;
+                roomRootDiv.append(roomTitle);
+
+                let descriptionP = document.createElement("p");
+                descriptionP.innerHTML = room.description;
+                roomRootDiv.append(descriptionP);
+
+            
+                for (let i=0; i < room.linkedrooms.length; i++) {
+                    let navButton = document.createElement ("button");
+                    navButton.innerHTML = room.linkedRooms[i];
+                    navButton.addEventListener("click", navButtonClicked);
+
+                }
+            }
+
+            visualizeRoom(currentRoom);
+
+        </script>
+
+    </body>
+
+</html>
