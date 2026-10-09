@@ -1,0 +1,24 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function printcount() {
+                let count =0;
+
+                function print () {
+                    console.log(name + "" + count);
+                    count += 1;
+                }
+                return print;
+            }
+
+            let printA = printcount("A");
+            printA();
+            let printB = printcount("B");
+            printB();
+
+        </script>
+    </body>
+</html>
