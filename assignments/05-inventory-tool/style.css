@@ -1,0 +1,27 @@
+.product img{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+body {
+    background-color: #c4c2c2;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.highlight {
+    border: 3px solid green;
+}
+
+body h1{
+    text-align: center;
+}
